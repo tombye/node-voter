@@ -44,24 +44,24 @@ io.configure(function () {
 });
 //
 //// Routes
-//
-//var port = process.env.PORT || 5000; // Use the port that Heroku provides or default to 5000
-//app.listen(port, function() {
-//  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
-//});
-//
-//app.get('/', routes.index);
-//
-//var votes = [0, 0];
-//
-//io.sockets.on('connection', function (socket) {
-//  io.sockets.emit('votes', { votes: votes }); // note the use of io.sockets to emit but socket.on to listen
-//  socket.on('vote1', function (data) {
-//    votes[0]++;
-//    io.sockets.emit('votes', { votes: votes, data: data });
-//  });
-//  socket.on('vote2', function (data) {
-//    votes[1]++;
-//    io.sockets.emit('votes', { votes: votes, data: data });
-//  });
-//});
+
+var port = process.env.PORT || 5000; // Use the port that Heroku provides or default to 5000
+app.listen(port, function() {
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
+});
+
+app.get('/', routes.index);
+
+var votes = [0, 0];
+
+io.sockets.on('connection', function (socket) {
+  io.sockets.emit('votes', { votes: votes }); // note the use of io.sockets to emit but socket.on to listen
+  socket.on('vote1', function (data) {
+    votes[0]++;
+    io.sockets.emit('votes', { votes: votes, data: data });
+  });
+  socket.on('vote2', function (data) {
+    votes[1]++;
+    io.sockets.emit('votes', { votes: votes, data: data });
+  });
+});
