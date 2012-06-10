@@ -34,14 +34,14 @@ app.configure('development', function() {
 app.configure('production', function() {
   app.use(express.errorHandler());
 });
-//
+
 //// Heroku won't actually allow us to use WebSockets
 //// so we have to setup polling instead.
-//// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
-//io.configure(function () {
-//  io.set("transports", ["xhr-polling"]);
-//  io.set("polling duration", 10);
-//});
+// https://devcenter.heroku.com/articles/using-socket-io-with-node-js-on-heroku
+io.configure(function () {
+  io.set("transports", ["xhr-polling"]);
+  io.set("polling duration", 10);
+});
 //
 //// Routes
 //
