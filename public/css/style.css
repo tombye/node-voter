@@ -1,0 +1,35 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+#results {
+  width:300px;
+  height:400px;
+  position:relative;
+}
+#results div {
+  width:100px;
+  height:400px;
+  position:absolute;
+  bottom:0;
+}
+#results .count {
+  text-align:center;
+  height:auto;
+}
+#results #result1 {
+  left:0px;  
+}
+#results #result1 .bar {
+  background-color:red;
+}
+#results #result2 {
+  left:150px;
+}
+#results #result2 .bar {
+  background-color:green;
+}
