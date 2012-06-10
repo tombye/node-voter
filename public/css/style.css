@@ -1,35 +1,66 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  text-align:center;
 }
 
 a {
   color: #00B7FF;
 }
+h2 {
+  font-size:2em;
+  text-align:left;
+}
 #results {
-  width:300px;
+  width:80%;
   height:400px;
   position:relative;
+  margin:0 auto;
 }
 #results div {
-  width:100px;
+  width:45%;
   height:400px;
   position:absolute;
   bottom:0;
+}
+#results div div {
+  width:100%;  
 }
 #results .count {
   text-align:center;
   height:auto;
 }
 #results #result1 {
-  left:0px;  
+  left:0%;  
 }
 #results #result1 .bar {
   background-color:red;
 }
 #results #result2 {
-  left:150px;
+  left:55%;
 }
 #results #result2 .bar {
   background-color:green;
+}
+#controls {
+  padding:1em;
+  margin:0 auto;
+}
+button {
+  padding:1em;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;  
+  border-radius:5px;
+  color:white;
+  font-weight:bold;
+  text-align:center;
+  font-size:1.4em;
+  border:none;
+  cursor:pointer;
+}
+#vote1 {
+  background:red;
+  margin-right:10%;
+}
+#vote2 {
+  background:green;
 }
